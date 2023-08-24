@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+
+   
+}
+.container{
+    overflow: hidden;
+}
+.introWrapper{
+    height: 100vh;
+    display: flex;    
+    width: auto;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.introTextContainer{
+    flex: 3;
+}
+.introPicContainer{
+    flex: 2;
+}
+.intropic{
+    width: 100%;
+    margin-top: 20vh;
+    height: 40%;
+}
+.introtext{
+    color: rgb(45, 44, 44);
+    font-size: 40vh;
+    cursor: default;
+   
+}
+
+/* name seciond */
+.nameWrapper{
+    height: 100vh;
+    background-color: rgb(30, 29, 30);
+    
+}
+.name{
+    font-size: 20vh;
+    text-align: center;
+    line-height: 100vh;
+    color: aliceblue;
+    cursor: default;
+    
+}
+
+/* jobtile */
+.jobTitleWrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.jobTitle{
+    font-size: 15vh;
+    color: white;
+    line-height: 100vh;
+    cursor: default;
+}
+.b1{
+   background: url("./Images/webDevPic.png");   
+    background-size: contain;
+       
+}
+.b2{
+    background: url("./Images/dd.jpg");
+    /* background-size: cover; */
+    background-size: 100% 100%;
+    /* background-repeat: no-repeat; */
+}
+
+/* projects */
+.projects{
+  display: flex;
+  flex-direction: column;
+  gap:30vh;
+  padding:0px 100px;
+  background-color: #0e0d0d;
+}
+.projectTitle{
+    font-size: 10vw;
+    color: #333;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.laptop{ 
+   /* width: 100%;
+   width: 100%; */
+    /* background-color: aqua;    */
+    flex: 1;
+    position: relative;
+}
+.projectDetails{
+    /* background-color: blue; */
+}
+
+.laptopScreen  {
+  /* background-color: red; */
+  position: absolute;
+  height:140px;
+  width: 200px;
+  top:52px;
+  left:49px;
+  overflow: scroll;
+  overflow-x: hidden;
+   
+}
+.laptopScreen::-webkit-scrollbar{
+    display: none;
+}
+.laptop img{
+    height:300px;
+    width: 300px;
+}
+.laptopScreen .laptopApp{
+    width: 100%;
+    height: 100%;    
+}
+.projectDetails{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    align-items: center;
+
+}
+.projectDetails .projectTitle{
+    font-size: 4vw;
+    color: #555;
+}
+.projectDesc{
+    font-size: 20px;
+    color: #555;
+    text-align: justify;
+    line-height: 40px;
+}
+.projectButton{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.projectButton::after{
+    content: "View Demo";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:-100%;
+    left: 0;
+    background-color: #555;
+    color:#222;
+    transition: 1s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projectButton:hover.projectButton::after{
+  transform: translateY(100%);
+}
+.glimpsTitle{
+    font-size: 3vw;
+    color: #333;
+   height: 5px;
+}
+.projectCrousal{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   
+}
+.projectPic{
+    width: 400px;
+    height: 200px;
+}
+
+/* githubsection */
+.githubWrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #0e0d0d;
+}
+.githubTitle{
+    font-size: 50px;
+    color: #333;
+}
+.githubFooter{
+    margin-left: 300px;
+    font-size: 50px;
+    color: #333;
+}
+.dates{
+    padding: 10px;
+    color: #555;
+    font-size: smaller;
+    display: flex;
+    justify-content: space-between;
+}
+.githubChart{
+    width: 820px;
+    /* text-align: center; */
+}
+.boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.box{
+    width: 15px;
+    height: 15px;
+    background-color: #171c25;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 3s all ease;
+}
+.active:nth-child(4n){
+  background-color: #195b2c;
+}
+.githubChart:hover .active:nth-child(2n+1){
+    background-color: #195b2c;
+}
+.githubChart:hover .active:nth-child(2n){
+    background-color: #146029;
+}
+
+@media screen and (max-width:1024px){
+    
+  .project{
+    /* flex-direction: column; */
+  }
+  .laptop{
+    transform: none !important;
+  }
+  .intropic{   
+    margin-top:0;
+    height: 60vh;
+    width: 40vh;
+}
+  .introtext{
+    font-size:  20vh;
+  }
+  .name{
+    font-size: 60px;
+    text-align: center;
+    line-height: 100vh;
+    color: aliceblue;
+    cursor: default;
+    
+}
+.jobTitle{
+    font-size: 5vh;
+    color: white;
+    line-height: 100vh;
+    cursor: default;
+}
+.b1{
+    background: url("./Images/webDevPic.png");
+        
+ }
+ .projects{
+    display: flex;
+    flex-direction: column;
+    gap:10vh;
+    background-color: #0e0d0d;
+  }
+ .projectPic{
+    width: 500px;
+    height: 300px;
+    transform: none !important;
+    /* transform: translateY(10vh) !important; */
+}
+.realtimecolPicDiv{
+    transform: none !important;
+}
+.dates{
+    /* padding: 5px; */
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #555;
+    font-size: smaller;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.githubFooter{
+    margin-left: 150px;
+    font-size: 100px;
+    color: #333;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
